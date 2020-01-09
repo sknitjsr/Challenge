@@ -1,0 +1,49 @@
+
+PROBLEM 1 :
+
+It has three columns
+session_id : Global session id,
+user_id : unique Id of user,
+created_at : time of opening that session. Format 'YYYY-MM-DD HH:MM:SS'
+
+Statement a ):
+If a user opened his first session at Bobble App at 5th Nov then he will be called new user for 5th Nov. Similarly a user when opens his first session at any day then he will be counted as a new user for that particular day.
+You need to provide date wise new user count at Bobble App acquired in November Month.
+
+Solution :
+-----------
+
+Thought Process - 
+          As its an Android App , We can use SQL query on the session_tables to find unique user on a particular day in November
+
+For example :
+        QUERY Below helps us to get count of users who logged at 4th November
+
+
+
+SELECT  COUNT(Distinct user_id)
+
+FROM    session_tables
+
+WHERE   created_at >= '2019-11-04 00:00:00'
+
+AND     created_at <  '2019-11-05 00:00:00'
+
+GROUP   BY
+	created_at
+
+HAVING  COUNT(Distinct user_id) > 1
+
+ORDER   BY
+	created_at
+
+If we need to find all users for a particular month , We can simply make A PL/ SQL task to achieve this .
+
+
+
+
+
+
+
+
+

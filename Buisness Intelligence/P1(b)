@@ -1,0 +1,34 @@
+Part(b) :
+If 15000  users opened sessions at 1st November and out of those 15K users, only 1000 users were new users of 1st Nov. And out of these 1K new users 800 again came at 2nd Nov, 600 from initial 1K came at 3rd Nov. Then we will say for 1st Nov
+DAU (Daily Active User) was 15K,
+D1 retention (2nd Nov): 80% (= 800/1000), D2 retention (3rd Nov): 60%
+You need to provide a summary on retention behaviour of Bobble users acquired in November month.
+
+Thought Process :
+		For a particular Day , We need to find count of new users , 
+                i.e , count of users who are registering for first time 
+
+		
+
+		Next we need to analyse the data of next day , we need to find how many users
+		from previous day new users have logged in.
+                that would be our retention % of that day .
+
+Algorithm :
+
+CalculateRetentionSummary(Data)
+{
+   month = November
+   date = 1st November
+   newUsers = Select distinct(user_id) from session_table where created_at like '2019/11/01 %' ;
+   RetainedUser = select user_id from session_table where user_id not in 
+			(Select distinct(user_id) from session_table where created_at like '2019/11/01 %')
+			and create_at like '2019/11/02' ;
+  D1_Ratio = (newUsers/RetainedUser)*100 ;
+
+  Repeat the Same steps to get Month Summary;
+
+}
+
+Note : Since the Data In CSV File is very huge , so keeping in View the Time Constraint I wasn't able to perform it practically.
+

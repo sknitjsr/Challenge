@@ -1,0 +1,35 @@
+P2) Estimate number of cricket balls you can fill in a Volvo Bus.
+----------------------------------------------------------------------
+Assumption :
+Cricket ball , 3cm
+Volvo - Cuboidal , 15*3*2
+
+Solution :
+
+To approach this answer, consider size of 1 average Cricket ball.
+
+So average radius is around 3 cms.
+
+Hence, we can calculate its volume by formula to calculate volume of sphere (4/3*π*r^3) which would turn around to be near 
+
+= 36 cubic cms = 0.000036 cubic meters 
+
+
+Here, we can assume volvo bus to be a cuboidal body.
+
+So calculate volume of bus = length*breadth*height
+
+In this formula, take length as 15 meters and breadth to be 3 meters and height to be 2 meters.
+
+So volume of a volvo bus = 90 cubic meters
+
+Take packing fraction into account.
+
+So,
+
+90 × 0.68 = 61.2
+
+No of balls that can fit in a volvo bus = 61.2 / 0.000036 = 17,00,000 balls
+
+Answer, 17 lacs balls.
+
