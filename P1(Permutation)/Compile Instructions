@@ -1,0 +1,8 @@
+How to Compile in Linux :
+
+1. Copy the csv file and python file in the same folder
+2. Open the CLI at that folder
+3. run command :
+   python permutation.py arg1 
+   where arg1 = name of csv file
+         
